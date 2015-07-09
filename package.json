@@ -36,5 +36,48 @@
         "single"
       ]
     }
-  }
+  },
+  "name": "oc-run",
+  "description": "Orlando City Run",
+  "version": "0.0.0",
+  "main": "gulpfile.babel.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "babel": "^5.6.14",
+    "del": "^1.2.0",
+    "gulp-cache": "^0.2.10",
+    "browser-sync": "^2.7.13",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.3",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-eslint": "^0.13.2",
+    "main-bower-files": "^2.8.2",
+    "opn": "^1.0.2",
+    "gulp-minify-html": "^1.0.3",
+    "gulp-size": "^1.2.3",
+    "gulp-useref": "^1.2.0",
+    "wiredep": "^2.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcreglow/OC-Run.git"
+  },
+  "author": "Phillip Creglow @pcreglow phillipcreglow@msn.com",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/pcreglow/OC-Run/issues"
+  },
+  "homepage": "https://github.com/pcreglow/OC-Run#readme"
 }
