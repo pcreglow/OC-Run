@@ -1,6 +1,6 @@
 {
   "firebase": "oc-run",
-  "public": "app",
+  "public": "dist",
   "ignore": [
     "firebase.json",
     "**/.*",
