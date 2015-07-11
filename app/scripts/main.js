@@ -1,11 +1,10 @@
-/* global angular Firebase */
+/* global angular */
 (function(){
   'use strict';
 
   angular.module('oc-run', [
     'ngRoute',
-    'restangular',
-    'firebase'
+    'restangular'
   ])
   .config(function($routeProvider){
     $routeProvider.when('/home', {
@@ -30,5 +29,5 @@
 
 
 
-  })
+  });
 })();
