@@ -8,6 +8,10 @@
     'firebase'
   ])
   .config(function($routeProvider){
+    $routeProvider.when('/home', {
+      templateUrl: 'views/home.html'
+    });
+    
     $routeProvider.when('/lakeEola', {
       templateUrl: 'views/lakeEola.html'
     });
@@ -20,7 +24,7 @@
       templateUrl: 'views/404.html'
     });
 
-    
+
 
   })
 })();
