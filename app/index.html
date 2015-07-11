@@ -27,7 +27,7 @@
     <![endif]-->
 
     <div class="container-fluid">
-      <div class="header head" ng-controller="MainController as app">
+      <div class="header head">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="#home">Home</a></li>
           <li><a href="#lakeEola">Lake Eola</a></li>
@@ -37,6 +37,7 @@
         <h3 class="text-muted">Orlando City Run</h3>
       </div><!-- end of header -->
 
+    <main class="container-fluid" ng-view>
       <div class="photo">
         <img src="images/oc_night.jpg" alt="Lake Eola Night">
       </div>
@@ -46,6 +47,7 @@
           <p>Welcome to my city. Bring you to my city. Let you run around my city!</p>
 
       </div>
+    </main>
 
       <div class="footer">
         <p>2015 Orlando City Run</p>
