@@ -28,7 +28,7 @@
     });
 
     $routeProvider.when('/', {
-        redirectTo: 'views/home.html'
+        redirectTo: '/home'
       });
 
       $routeProvider.otherwise('/404');
