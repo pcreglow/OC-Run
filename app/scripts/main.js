@@ -19,15 +19,19 @@
       templateUrl: 'views/millsFifty.html'
     });
 
-    $routeProvider.when('/contact', {
-      templateUrl: 'views/contact.html'
+    $routeProvider.when('/about', {
+      templateUrl: 'views/about.html'
     });
 
     $routeProvider.when('/404', {
       templateUrl: 'views/404.html'
     });
 
+    $routeProvider.when('/', {
+        redirectTo: '/home'
+      });
 
+      $routeProvider.otherwise('/404');
 
   });
 })();
