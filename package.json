@@ -56,7 +56,7 @@
     "type": "git",
     "url": "git+https://github.com/pcreglow/OC-Run.git"
   },
-  "author": "Phillip Creglow @pcreglow phillipcreglow@msn.com",
+  "author": "Phillip Creglow <phillipcreglow@msn.com>",
   "license": "CC0-1.0",
   "bugs": {
     "url": "https://github.com/pcreglow/OC-Run/issues"
