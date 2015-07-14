@@ -1,11 +1,11 @@
 <div class="row">
   <div class="pull-left col-md-4">
-    <div class="description">
+    <div class="description" ng-repeat="route in routes">
     <h3>Lake Eola 2 Miler</h3><br>
     <p>Lake Eola offers a unique urban running environment. This 2 mile route provides
     outstanding scenery of Lake Eola and the downtown skyline.</p><br>
     <h4>Distance: 2 miles</h4>
-    <h4> route.distance </h4>
+    <h4>{{ route.distance }}</h4>
     <h4>{{ route.dog }}</h4>
     </div>
     <div class="categories">
