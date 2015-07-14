@@ -1,10 +1,11 @@
-/* global angular */
+/* global angular Firebase */
 (function(){
   'use strict';
 
   angular.module('oc-run', [
     'ngRoute',
-    'restangular'
+    'restangular',
+    'firebase'
   ])
   .config(function($routeProvider){
     $routeProvider.when('/home', {
@@ -12,7 +13,9 @@
     });
 
     $routeProvider.when('/lakeEola', {
-      templateUrl: 'views/lakeEola.html'
+      templateUrl: 'views/lakeEola.html',
+      controller: 'LakeController',
+      controllerAs: 'lake'
     });
 
     $routeProvider.when('/millsFifty', {
