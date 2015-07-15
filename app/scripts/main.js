@@ -18,7 +18,7 @@
       controllerAs: 'lake'
     });
 
-    $routeProvider.when('/route1', {
+    $routeProvider.when('/lakeEola/route1', {
       templateUrl: 'views/route1.html'
     });
 
