@@ -84,24 +84,24 @@
       <br>
       <ul class="list-group">
         <li class="list-group-item">
-          The Urban Trail is a gem. You won't find a better spot to run in Orlando.
+          {{ route.comments.comment1.text }}
           <br>
           <small>
-            <strong>John Doe</strong>
+            <strong>{{ route.comments.comment1.name }}</strong>
           </small>
         </li>
         <li class="list-group-item">
-          I like the dividing line on the pathway to help with traffic. Watch out for bikes!
+          {{ route.comments.comment2.text }}
           <br>
           <small>
-            <strong>Jane Doe</strong>
+            <strong>{{ route.comments.comment2.name }}</strong>
           </small>
         </li>
         <li class="list-group-item">
-          Walk...don't run!
+          {{ route.comments.comment3.text }}
           <br>
           <small>
-            <strong>Anonymous</strong>
+            <strong>{{ route.comments.comment3.name }}</strong>
           </small>
         </li>
       </ul>
