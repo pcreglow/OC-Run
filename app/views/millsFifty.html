@@ -2,14 +2,11 @@
   <div class="row">
     <div class="pull-left col-md-4">
       <div class="description">
-        <h3>Mills 50 5K Loop</h3>
+        <h3>{{ route.name }}</h3>
         <br>
-        <p>This 5K loop on the Urban Trail and in the heart of the Mills 50 district is urban running at its finest. Generous pathways that wind through trees and lakes while maintaing an urban neighborhood feel.</p>
+        <p>{{ route.description }}</p>
         <br>
-        <h4>Distance: 3.1 miles (loop)</h4>
-        <h4>{{ route.dog }}</h4>
-        <p>{{ route.bike }}</p>
-
+        <h4>Distance: {{ route.distance }} </h4>
       </div>
       <div class="categories">
         <ul class="list-group">
