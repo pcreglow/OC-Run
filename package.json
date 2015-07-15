@@ -41,7 +41,7 @@
   },
   "name": "oc-run",
   "description": "Orlando City Run",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "gulpfile.babel.js",
   "directories": {
     "test": "test"
