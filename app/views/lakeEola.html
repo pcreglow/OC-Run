@@ -1,5 +1,5 @@
 <section ng-repeat="route in routes">
-  <div class="row">
+
     <ul class="nav nav-tabs">
       <li role="presentation" class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -12,8 +12,9 @@
         </ul>
       </li>
     </ul>
-    <main class="container-fluid">
-    <div class="pull-left col-md-4"> <!-- start route view -->
+
+  <div class="row">
+    <div class="pull-left col-md-4">
       <div class="description">
         <h3>{{ route.name }}</h3>
         <br>
@@ -48,11 +49,12 @@
         </ul>
       </div>
     </div>
+
     <div class="photo col-md-8">
       <img src="images/OCRunMap.png" alt="Orlando City Run Map">
     </div>
-  </div><!-- end route view -->
-</main>
+  </div>
+
   <div class="row">
     <div class="col-xs-6 col-md-3">
       <a class="thumbnail">
