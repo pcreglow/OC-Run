@@ -22,6 +22,10 @@
       templateUrl: 'views/route1.html'
     });
 
+    $routeProvider.when('/lakeEola/route2', {
+      templateUrl: 'views/route2.html'
+    });
+
     $routeProvider.when('/millsFifty', {
       templateUrl: 'views/millsFifty.html',
       controller: 'MillsController',
