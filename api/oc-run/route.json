@@ -1,0 +1,26 @@
+{
+  "route1": {
+    "title": "Lake Eola 2 Miler",
+    "description": "Lake Eola offers a unique urban running environment. This 2 mile route provides outstanding scenery of Lake Eola and the downtown skyline.",
+    "distance": "2 miles",
+    "amenities": "Drinking fountain, bathrooms",
+    "crowd": "High during evening",
+    "dog": "Medium",
+    "bike": "Low",
+    "surface": "Wide pathways",
+    "comments": {
+      "comment1": {
+        "text": "Outstanding running route! Best in Orlando.",
+        "name": "John Doe"
+      },
+      "comment2": {
+        "text": "Crowded during the evening but a beautiful view.",
+        "name": "Jane Doe"
+      },
+      "comment3": {
+        "text": "I don't run but this is an excellent route for walkers!",
+        "name": "Anonymous"
+      }
+    }
+  }
+}
