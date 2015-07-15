@@ -19,7 +19,9 @@
     });
 
     $routeProvider.when('/millsFifty', {
-      templateUrl: 'views/millsFifty.html'
+      templateUrl: 'views/millsFifty.html',
+      controller: 'MillsController',
+      controllerAs: 'mills'
     });
 
     $routeProvider.when('/about', {
