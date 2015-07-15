@@ -1,6 +1,18 @@
 <section ng-repeat="route in routes">
   <div class="row">
-    <div class="pull-left col-md-4">
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Routes <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#/lakeEola/route1">Route1</a></li>
+          <li><a href="#route2">Route2</a></li>
+          <li><a href="#route3">Route3</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="pull-left col-md-4"> <!-- start route view -->
       <div class="description">
         <h3>{{ route.name }}</h3>
         <br>
@@ -38,7 +50,7 @@
     <div class="photo col-md-8">
       <img src="images/OCRunMap.png" alt="Orlando City Run Map">
     </div>
-  </div>
+  </div><!-- end route view -->
 
   <div class="row">
     <div class="col-xs-6 col-md-3">
