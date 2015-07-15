@@ -18,6 +18,10 @@
       controllerAs: 'lake'
     });
 
+    $routeProvider.when('/route1', {
+      templateUrl: 'views/route1.html'
+    });
+
     $routeProvider.when('/millsFifty', {
       templateUrl: 'views/millsFifty.html',
       controller: 'MillsController',
