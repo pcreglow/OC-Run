@@ -36,6 +36,10 @@
       templateUrl: 'views/mills2.html'
     });
 
+    $routeProvider.when('/mills2', {
+      templateUrl: 'views/mills3.html'
+    });
+
     $routeProvider.when('/about', {
       templateUrl: 'views/about.html'
     });
