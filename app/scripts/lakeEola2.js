@@ -3,14 +3,14 @@
   'use strict';
 
 angular.module('oc-run')
-  .controller('LakeController', function($http) {
+  .controller('Lake2Controller', function($http) {
     var self = this;
-
-
-    $http.get('https://oc-run.firebaseio.com/lakeEola/.json')
+    self.routes = [ ];
+    
+    $http.get('https://oc-run.firebaseio.com/lakeEola2/.json')
     .then(function(response){
+      console.log(response.data);
       self.routes = response.data;
-      console.log(self.routes);
     });
   });
 })();
