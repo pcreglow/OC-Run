@@ -19,7 +19,9 @@
     });
 
     $routeProvider.when('/route1', {
-      templateUrl: 'views/lakeEola2.html'
+      templateUrl: 'views/lakeEola2.html',
+      controller: 'Lake2Controller',
+      controllerAs: 'lake2'
     });
 
     $routeProvider.when('/route2', {
