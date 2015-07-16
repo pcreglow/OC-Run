@@ -25,7 +25,9 @@
     });
 
     $routeProvider.when('/route2', {
-      templateUrl: 'views/lakeEola3.html'
+      templateUrl: 'views/lakeEola3.html',
+      controller: 'Lake3Controller',
+      controllerAs: 'lake3'
     });
 
     $routeProvider.when('/millsFifty', {
