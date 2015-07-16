@@ -18,8 +18,12 @@
       controllerAs: 'lake'
     });
 
-    $routeProvider.when('/lakeEola/route1', {
-      templateUrl: 'views/route1.html'
+    $routeProvider.when('/route1', {
+      templateUrl: 'views/lakeEola2.html'
+    });
+
+    $routeProvider.when('/route2', {
+      templateUrl: 'views/lakeEola3.html'
     });
 
     $routeProvider.when('/millsFifty', {
