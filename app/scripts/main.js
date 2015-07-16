@@ -19,11 +19,11 @@
     });
 
     $routeProvider.when('/route1', {
-      templateUrl: 'views/route1.html'
+      templateUrl: 'views/lakeEola2.html'
     });
 
     $routeProvider.when('/route2', {
-      templateUrl: 'views/route2.html'
+      templateUrl: 'views/lakeEola3.html'
     });
 
     $routeProvider.when('/millsFifty', {
