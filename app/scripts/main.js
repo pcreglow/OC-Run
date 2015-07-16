@@ -32,6 +32,10 @@
       controllerAs: 'mills'
     });
 
+    $routeProvider.when('/mills1', {
+      templateUrl: 'views/mills2.html'
+    });
+
     $routeProvider.when('/about', {
       templateUrl: 'views/about.html'
     });
