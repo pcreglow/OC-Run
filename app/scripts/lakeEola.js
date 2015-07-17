@@ -11,7 +11,8 @@ angular.module('oc-run')
       console.log(self.routes);
     });
 
-    var ref = new Firebase('https://oc-run.firebaseio.com/lakeEola/route/comments/' + $routeParams.lake);
+    var comments = $routeParams.lake;
+    var ref = new Firebase('https://oc-run.firebaseio.com/lakeEola/route/' + 'comments');
     self.comments = $firebaseArray(ref);
 
     self.addComment = function(){
