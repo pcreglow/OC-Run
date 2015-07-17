@@ -20,6 +20,8 @@ angular.module('oc-run')
         name: self.newCommentName,
         text: self.newCommentText
       });
+      self.newCommentName="";
+      self.newCommentText="";
     };
 
   });
