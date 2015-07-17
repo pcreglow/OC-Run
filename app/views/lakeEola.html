@@ -1,6 +1,5 @@
-<section>
-  <div class="row">
-    <div class="pull-left col-md-4" ng-repeat="route in lake.routes">
+<div class="row" ng-repeat="route in lake.routes">
+    <div class="pull-left col-md-4">
       <div class="description">
         <h3>{{ route.name }}</h3>
         <br>
@@ -37,7 +36,7 @@
     </div>
 
     <div class="photo col-md-8">
-      <img src="images/OCRunMap.png" alt="Orlando City Run Map">
+      <img src="{{ route.map_url }}" alt="Orlando City Run Map">
     </div>
   </div>
 
@@ -108,4 +107,3 @@
       </div>
     </form>
   </div>
-</section>
