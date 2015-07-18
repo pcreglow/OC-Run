@@ -14,29 +14,29 @@
         <ul class="list-group">
           <li class="list-group-item">
             <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-            Amenities:
+            Amenities: {{ route.amenities }}
           </li>
           <li class="list-group-item">
             <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
-            Crowds:
+            Crowds: {{ route.crowd }}
           </li>
           <li class="list-group-item">
             <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-            Dog activity:
+            Dog activity: {{ route.dog }}
           </li>
           <li class="list-group-item">
             <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
-            Bike activity:
+            Bike activity: {{ route.bike }}
           </li>
           <li class="list-group-item">
             <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
-            Surface:
+            Surface: {{ route.surface }}
           </li>
         </ul>
       </div>
     </div>
     <div class="photo col-md-8">
-      <img src="images/Lake_Eola2.png" alt="Orlando City Run Map">
+      <img src="{{ route.map_url }}" alt="Orlando City Run Map">
     </div>
   </div>
 
