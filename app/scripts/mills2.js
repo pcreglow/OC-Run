@@ -1,6 +1,5 @@
 /* global angular */
-
-(function() {
+(function(){
   'use strict';
 
   angular.module('oc-run')
@@ -11,5 +10,5 @@
         self.routes = response.data;
         console.log(self.routes);
       });
-
+    });
 })();
