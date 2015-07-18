@@ -43,7 +43,9 @@
     });
 
     $routeProvider.when('/mills2', {
-      templateUrl: 'views/mills3.html'
+      templateUrl: 'views/mills3.html',
+      controller: 'Mills3Controller',
+      controllerAs: 'mills3'
     });
 
     $routeProvider.when('/about', {
