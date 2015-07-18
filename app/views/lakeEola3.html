@@ -1,5 +1,4 @@
-<section ng-repeat="route in lake3.routes">
-<div class="row">
+<div class="row" ng-repeat="route in lake3.routes">
   <div class="pull-left col-md-4">
     <div class="description">
       <h3>{{ route.name }}</h3>
@@ -9,6 +8,7 @@
       <h4>Distance: {{ route.distance }}</h4>
       <br>
     </div>
+
     <div class="categories">
       <ul class="list-group">
         <li class="list-group-item">
@@ -34,6 +34,7 @@
       </ul>
     </div>
   </div>
+
   <div class="photo col-md-8">
     <img src="{{ route.map_url }}" alt="Orlando City Run Map">
   </div>
@@ -80,6 +81,22 @@
     </ul>
   </div>
 
+  <form ng-submit="lake3.addComment()">
+    <div class="commentForm form-group col-md-4">
+      <label>
+        <strong>Submit a comment</strong>
+      </label>
+      <br>
+      <label for="inputName">Name</label>
+      <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="lake3.newCommentName">
+      <br>
+      <label for="inputComment">Comment</label>
+      <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="lake3.newCommentText">
+      <br>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </form>
+
   <div class="comments col-md-4">
     <label>Comments</label>
     <br>
@@ -93,18 +110,4 @@
       </li>
     </ul>
   </div>
-
-  <form ng-submit="lake3.addComment()">
-    <div class="commentForm form-group col-md-4">
-      <label for="inputName">Name</label>
-      <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="lake3.newCommentName">
-      <br>
-      <label for="inputComment">Comment</label>
-      <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="lake3.newCommentText">
-      <br>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </div>
-  </form>
 </div>
-
-</section>
