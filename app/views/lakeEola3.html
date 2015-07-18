@@ -13,29 +13,29 @@
       <ul class="list-group">
         <li class="list-group-item">
           <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-          Amenities:
+          Amenities: {{ route.amenities }}
         </li>
         <li class="list-group-item">
           <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
-          Crowds:
+          Crowds: {{ route.crowd }}
         </li>
         <li class="list-group-item">
           <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-          Dog activity:
+          Dog activity: {{ route.dog }}
         </li>
         <li class="list-group-item">
           <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
-          Bike activity:
+          Bike activity: {{ route.bike }}
         </li>
         <li class="list-group-item">
           <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
-          Surface:
+          Surface: {{ route.surface }}
         </li>
       </ul>
     </div>
   </div>
   <div class="photo col-md-8">
-    <img src="images/Mills50.png" alt="Orlando City Run Map">
+    <img src="{{ route.map_url }}" alt="Orlando City Run Map">
   </div>
 </div>
 
@@ -79,41 +79,28 @@
       </li>
     </ul>
   </div>
+
   <div class="comments col-md-4">
     <label>Comments</label>
     <br>
-    <ul class="list-group">
+    <ul class="list-group" ng-repeat="(id, comment) in lake3.comments">
       <li class="list-group-item">
-        {{ route.comments.comment1.text }}
+        {{ comment.text }}
         <br>
         <small>
-          <strong>{{ route.comments.comment1.name }}</strong>
-        </small>
-      </li>
-      <li class="list-group-item">
-        {{ route.comments.comment2.text }}
-        <br>
-        <small>
-          <strong>{{ route.comments.comment2.name }}</strong>
-        </small>
-      </li>
-      <li class="list-group-item">
-        {{ route.comments.comment3.text }}
-        <br>
-        <small>
-          <strong>{{ route.comments.comment3.name }}</strong>
+          <strong>{{ comment.name }}</strong>
         </small>
       </li>
     </ul>
   </div>
 
-  <form>
+  <form ng-submit="lake3.addComment()">
     <div class="commentForm form-group col-md-4">
       <label for="inputName">Name</label>
-      <input type="name" class="form-control" id="inputName" placeholder="Your Name">
+      <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="lake3.newCommentName">
       <br>
       <label for="inputComment">Comment</label>
-      <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route">
+      <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="lake3.newCommentText">
       <br>
       <button type="submit" class="btn btn-default">Submit</button>
     </div>
