@@ -37,7 +37,9 @@
     });
 
     $routeProvider.when('/mills1', {
-      templateUrl: 'views/mills2.html'
+      templateUrl: 'views/mills2.html',
+      controller: 'Mills2Controller',
+      controllerAs: 'mills2'
     });
 
     $routeProvider.when('/mills2', {
