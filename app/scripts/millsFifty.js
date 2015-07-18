@@ -12,9 +12,18 @@
       });
 
       var comments = $routeParams.lake;
-      var ref = new Firebase('https://oc-run.firebaseio.com/millsFifty/route/' + 'comments');
+      var ref = new Firebase('https://oc-run.firebaseio.com/mills50/route/' + 'comments');
       self.comments = $firebaseArray(ref);
 
+      self.addComment = function(){
+
+        self.comments.$add({
+          name: self.newCommentName,
+          text: self.newCommentText
+        });
+        self.newCommentName="";
+        self.newCommentText="";
+      };
 
     });
 })();
