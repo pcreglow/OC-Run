@@ -1,110 +1,114 @@
 <div class="row" ng-repeat="route in mills2.routes">
-    <div class="pull-left col-md-4">
-      <div class="description">
-        <h3>{{ route.name }}</h3>
-        <br>
-        <p>{{ route.description }}</p>
-        <br>
-        <h4>Distance: {{ route.distance }}</h4>
-        <br>
-      </div>
-
-      <div class="categories">
-        <ul class="list-group">
-          <li class="list-group-item">
-            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-            Amenities: {{ route.amenities }}
-          </li>
-          <li class="list-group-item">
-            <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
-            Crowds: {{ route.crowd }}
-          </li>
-          <li class="list-group-item">
-            <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-            Dog activity: {{ route.dog }}
-          </li>
-          <li class="list-group-item">
-            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
-            Bike activity: {{ route.bike }}
-          </li>
-          <li class="list-group-item">
-            <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
-            Surface: {{ route.surface }}
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="photo col-md-8">
-      <img src="{{ route.map_url }}" alt="Orlando City Run Map">
-    </div>
-
-  </div>
-
-  <div class="row">
-    <div class="col-xs-6 col-md-3">
-      <a class="thumbnail">
-        <img src="http://lorempixel.com/400/200/sports/5/" alt="sports-one">
-      </a>
-    </div>
-    <div class="col-xs-6 col-md-3">
-      <a class="thumbnail">
-        <img src="http://lorempixel.com/400/200/sports/6/" alt="sports-two">
-      </a>
-    </div>
-    <div class="col-xs-6 col-md-3">
-      <a class="thumbnail">
-        <img src="http://lorempixel.com/400/200/sports/7/" alt="sports-three">
-      </a>
-    </div>
-    <div class="col-xs-6 col-md-3">
-      <a class="thumbnail">
-        <img src="http://lorempixel.com/400/200/sports/8/" alt="sports-four">
-      </a>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="events pull-left col-md-4">
-      <label>Local Events</label>
+  <div class="pull-left col-md-4">
+    <div class="description">
+      <h3>{{ route.name }}</h3>
       <br>
+      <p>{{ route.description }}</p>
+      <br>
+      <h4>Distance: {{ route.distance }}</h4>
+      <br>
+    </div>
+
+    <div class="categories">
       <ul class="list-group">
         <li class="list-group-item">
-          <strong>Track Shack Running Group</strong>
-          <br> When: Every Tuesday and Thursday at 6:30
-          <br> Contact: <a href="www.trackshack.com">www.trackshack.com</a>
+          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+          Amenities: {{ route.amenities }}
         </li>
         <li class="list-group-item">
-          <strong>Orlando Runners</strong>
-          <br> When: Every Saturday at 7:30 AM
-          <br> Contact: Orlando Runners on meetup.com</a>
+          <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+          Crowds: {{ route.crowd }}
+        </li>
+        <li class="list-group-item">
+          <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
+          Dog activity: {{ route.dog }}
+        </li>
+        <li class="list-group-item">
+          <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+          Bike activity: {{ route.bike }}
+        </li>
+        <li class="list-group-item">
+          <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
+          Surface: {{ route.surface }}
         </li>
       </ul>
     </div>
-
-    <div class="comments col-md-4">
-      <label>Comments</label>
-      <br>
-      <ul class="list-group" ng-repeat="(id, comment) in mills2.comments">
-        <li class="list-group-item">
-          {{ comment.text }}
-          <br>
-          <small>
-            <strong>{{ comment.name }}</strong>
-          </small>
-        </li>
-      </ul>
-    </div>
-
-    <form ng-submit="mills2.addComment()">
-      <div class="commentForm form-group col-md-4">
-        <label for="inputName">Name</label>
-        <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="mills2.newCommentName">
-        <br>
-        <label for="inputComment">Comment</label>
-        <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="mills2.newCommentText">
-        <br>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </div>
-    </form>
   </div>
+
+  <div class="photo col-md-8">
+    <img src="{{ route.map_url }}" alt="Orlando City Run Map">
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a class="thumbnail">
+      <img src="http://lorempixel.com/400/200/sports/5/" alt="sports-one">
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <a class="thumbnail">
+      <img src="http://lorempixel.com/400/200/sports/6/" alt="sports-two">
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <a class="thumbnail">
+      <img src="http://lorempixel.com/400/200/sports/7/" alt="sports-three">
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <a class="thumbnail">
+      <img src="http://lorempixel.com/400/200/sports/8/" alt="sports-four">
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="events pull-left col-md-4">
+    <label>Local Events</label>
+    <br>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <strong>Track Shack Running Group</strong>
+        <br> When: Every Tuesday and Thursday at 6:30
+        <br> Contact: <a href="www.trackshack.com">www.trackshack.com</a>
+      </li>
+      <li class="list-group-item">
+        <strong>Orlando Runners</strong>
+        <br> When: Every Saturday at 7:30 AM
+        <br> Contact: Orlando Runners on meetup.com</a>
+      </li>
+    </ul>
+  </div>
+
+  <form ng-submit="mills2.addComment()">
+    <div class="commentForm form-group col-md-4">
+      <label>
+        <strong>Submit a comment</strong>
+      </label>
+      <br>
+      <label for="inputName">Name</label>
+      <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="mills2.newCommentName">
+      <br>
+      <label for="inputComment">Comment</label>
+      <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="mills2.newCommentText">
+      <br>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </form>
+
+  <div class="comments col-md-4">
+    <label>Comments</label>
+    <br>
+    <ul class="list-group" ng-repeat="(id, comment) in mills2.comments">
+      <li class="list-group-item">
+        {{ comment.text }}
+        <br>
+        <small>
+          <strong>{{ comment.name }}</strong>
+        </small>
+      </li>
+    </ul>
+  </div>
+</div>
