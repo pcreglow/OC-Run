@@ -10,5 +10,7 @@
         self.routes = response.data;
         console.log(self.routes);
       });
+
+      
     });
 })();
