@@ -1,6 +1,7 @@
 <div class="row">
-  <div class="description pull-left col-md-4">
-    <h4>It's time to RUN!</h4>
+  <div class="description pull-left col-md-4" ng-repeat="route in millsEvents.routes">
+    <h4>{{ route.title }}</h4><br>
+    <p>{{ route.description }}</p>
   </div>
   <div class="photo col-md-8">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="10000">
@@ -28,40 +29,44 @@
 </div>
 
 <div class="row">
-  <form class="pull-left col-md-6">
-  <div class="form-group">
-    <label><strong>Submit Event/Running Group</strong></label><br>
-    <label for="eventName">Event Name</label>
-    <input type="name" class="form-control" id="inputEventName" placeholder="Name of event/running group">
-  </div>
-  <div class="form-group">
-    <label for="activityDate">Event Date</label>
-    <input type="date" class="form-control" id="inputActivityDate" placeholder="Event Date(s)">
-  </div>
-  <div class="form-group">
-    <label for="website">Website</label>
-    <input type="url" class="form-control" id="inputContact" placeholder="Event website">
-  </div>
-  <label for="inputComment">Comment</label>
-  <textarea class="form-control" rows="3" placeholder="Additional information about this event"></textarea><br>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+    <form class="pull-left col-md-6" ng-submit="millsEvents.addEvent()">
+    <div class="form-group">
+      <label><strong>Submit Event/Running Group</strong></label><br>
+      <label for="eventName">Event/Group Name</label>
+      <input type="name" class="form-control" id="inputEventName" placeholder="Name of event/running group" ng-model="millsEvents.newEventName">
+    </div>
+    <div class="form-group">
+      <label for="eventLocation">Event/Group Location</label>
+      <input type="text" class="form-control" id="inputEventLocation" placeholder="Event location" ng-model="millsEvents.newEventLocation">
+    </div>
+    <div class="form-group">
+      <label for="eventDate">Event/Group Date</label>
+      <input type="text" class="form-control" id="inputEventDate" placeholder="Ex: July 31, 2015" ng-model="millsEvents.newEventDate">
+    </div>
+    <div class="form-group">
+      <label for="eventDate">Event/Group Time</label>
+      <input type="text" class="form-control" id="inputEventTime" placeholder="Ex: 6:30 PM" ng-model="millsEvents.newEventTime">
+    </div>
+    <div class="form-group">
+      <label for="eventContact">Event/Group Contact</label>
+      <input type="text" class="form-control" id="inputEventContact" placeholder="Event contact info, website" ng-model="millsEvents.newEventContact">
+    </div>
+    <label for="eventInformation">Event/Group Information</label>
+    <textarea type="text" class="form-control" id="inputEventInformation" rows="3" placeholder="Additional information about this event" ng-model="millsEvents.newEventInformation"></textarea><br>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
 
   <div class="events pull-right col-md-6">
     <label>Events/Running Groups</label>
     <br>
-    <ul class="list-group">
+    <ul class="list-group" ng-repeat="(id, event) in millsEvents.events">
       <li class="list-group-item">
-        <strong>Track Shack Running Group</strong>
-        <br> When: Every Tuesday and Thursday at 6:30 PM
-        <br> Website: <a href="www.trackshack.com">www.trackshack.com</a>
-        <br> Additional: Join us every Tuesday and Thursday at 6:30 PM! We meet outside the playground
-        on the east side of Lake Eola. Come and meet fellow runners on this casual run around scenic Lake Eola.
-      </li>
-      <li class="list-group-item">
-        <strong>Orlando Runners</strong>
-        <br> When: Every Saturday at 7:30 AM
-        <br> Contact: Orlando Runners on meetup.com</a>
+        <strong><big>{{ event.name }}</big></strong>
+        <br><strong>Location: </strong> {{ event.location }}
+        <br><strong>Date: </strong> {{ event.date }}
+        <br><strong>Time: </strong> {{ event.time }}
+        <br><strong>Contact: </strong> {{ event.contact }}
+        <br><strong>Event Info: </strong> {{ event.info }}
       </li>
     </ul>
   </div>
