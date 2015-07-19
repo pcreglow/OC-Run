@@ -1,12 +1,14 @@
-<div class="row" ng-repeat="route in mills.routes">
+<div class="row" ng-repeat="route in mills2.routes">
   <div class="pull-left col-md-4">
     <div class="description">
       <h3>{{ route.name }}</h3>
       <br>
       <p>{{ route.description }}</p>
       <br>
-      <h4>Distance: {{ route.distance }} </h4>
+      <h4>Distance: {{ route.distance }}</h4>
+      <br>
     </div>
+
     <div class="categories">
       <ul class="list-group">
         <li class="list-group-item">
@@ -32,9 +34,11 @@
       </ul>
     </div>
   </div>
+
   <div class="photo col-md-8">
-    <img src="{{ route.map_url }}" alt="Mills 50 Run Map">
+    <img src="{{ route.map_url }}" alt="Orlando City Run Map">
   </div>
+
 </div>
 
 <div class="row">
@@ -78,17 +82,17 @@
     </ul>
   </div>
 
-  <form ng-submit="mills.addComment()">
+  <form ng-submit="mills2.addComment()">
     <div class="commentForm form-group col-md-4">
       <label>
         <strong>Submit a comment</strong>
       </label>
       <br>
       <label for="inputName">Name</label>
-      <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="mills.newCommentName">
+      <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="mills2.newCommentName">
       <br>
       <label for="inputComment">Comment</label>
-      <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="mills.newCommentText">
+      <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="mills2.newCommentText">
       <br>
       <button type="submit" class="btn btn-default">Submit</button>
     </div>
@@ -97,7 +101,7 @@
   <div class="comments col-md-4">
     <label>Comments</label>
     <br>
-    <ul class="list-group" ng-repeat="(id, comment) in mills.comments">
+    <ul class="list-group" ng-repeat="(id, comment) in mills2.comments">
       <li class="list-group-item">
         {{ comment.text }}
         <br>

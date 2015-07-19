@@ -18,10 +18,34 @@
       controllerAs: 'lake'
     });
 
+    $routeProvider.when('/route1', {
+      templateUrl: 'views/lakeEola2.html',
+      controller: 'Lake2Controller',
+      controllerAs: 'lake2'
+    });
+
+    $routeProvider.when('/route2', {
+      templateUrl: 'views/lakeEola3.html',
+      controller: 'Lake3Controller',
+      controllerAs: 'lake3'
+    });
+
     $routeProvider.when('/millsFifty', {
       templateUrl: 'views/millsFifty.html',
       controller: 'MillsController',
       controllerAs: 'mills'
+    });
+
+    $routeProvider.when('/mills1', {
+      templateUrl: 'views/mills2.html',
+      controller: 'Mills2Controller',
+      controllerAs: 'mills2'
+    });
+
+    $routeProvider.when('/mills2', {
+      templateUrl: 'views/mills3.html',
+      controller: 'Mills3Controller',
+      controllerAs: 'mills3'
     });
 
     $routeProvider.when('/about', {

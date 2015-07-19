@@ -30,8 +30,26 @@
       <div class="header head">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="#home">Home</a></li>
-          <li><a href="#lakeEola">Lake Eola</a></li>
-          <li><a href="#millsFifty">Mills 50</a></li>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              Lake Eola <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#lakeEola">Route1</a></li>
+              <li><a href="#route1">Route2</a></li>
+              <li><a href="#route2">Route3</a></li>
+            </ul>
+          </li>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              Mills 50 <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#millsFifty">Route1</a></li>
+              <li><a href="#mills1">Route2</a></li>
+              <li><a href="#mills2">Route3</a></li>
+            </ul>
+          </li>
           <li><a href="#about">About</a></li>
         </ul>
         <h3 class="text-muted">Orlando City Run</h3>
@@ -76,7 +94,11 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <script src="scripts/lakeEola.js"></script>
+    <script src="scripts/lakeEola2.js"></script>
+    <script src="scripts/lakeEola3.js"></script>
     <script src="scripts/millsFifty.js"></script>
+    <script src="scripts/mills2.js"></script>
+    <script src="scripts/mills3.js"></script>
     <!-- endbuild -->
   </body>
 </html>

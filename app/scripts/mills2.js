@@ -3,15 +3,15 @@
   'use strict';
 
   angular.module('oc-run')
-    .controller('MillsController', function($http, $routeParams, $firebaseArray) {
+    .controller('Mills2Controller', function($http, $routeParams, $firebaseArray) {
       var self = this;
-      $http.get('https://oc-run.firebaseio.com/mills50/.json')
+      $http.get('https://oc-run.firebaseio.com/mills2/.json')
       .then(function(response){
         self.routes = response.data;
         console.log(self.routes);
       });
 
-      var ref = new Firebase('https://oc-run.firebaseio.com/mills50/route/' + 'comments');
+      var ref = new Firebase('https://oc-run.firebaseio.com/mills2/route/' + 'comments');
       self.comments = $firebaseArray(ref);
 
       self.addComment = function(){

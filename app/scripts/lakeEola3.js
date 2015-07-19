@@ -3,15 +3,17 @@
   'use strict';
 
   angular.module('oc-run')
-    .controller('MillsController', function($http, $routeParams, $firebaseArray) {
+    .controller('Lake3Controller', function($http, $routeParams, $firebaseArray) {
       var self = this;
-      $http.get('https://oc-run.firebaseio.com/mills50/.json')
+      self.routes = [ ];
+
+      $http.get('https://oc-run.firebaseio.com/lakeEola3/.json')
       .then(function(response){
+        console.log(response.data);
         self.routes = response.data;
-        console.log(self.routes);
       });
 
-      var ref = new Firebase('https://oc-run.firebaseio.com/mills50/route/' + 'comments');
+      var ref = new Firebase('https://oc-run.firebaseio.com/lakeEola3/route/' + 'comments');
       self.comments = $firebaseArray(ref);
 
       self.addComment = function(){
