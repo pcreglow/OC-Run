@@ -22,8 +22,9 @@
   </div>
   </div>
 </div>
-  <div class="description pull-right col-md-4">
-    <h4>It's time to RUN!</h4>
+  <div class="description pull-right col-md-4" ng-repeat="route in lakeEvents.routes">
+    <h4>{{ route.title }}</h4><br>
+    <p>{{ route.description }}</p>
   </div>
 </div>
 
