@@ -55,7 +55,9 @@
     });
 
     $routeProvider.when('/millsEvents', {
-      templateUrl: 'views/millsEvents.html'
+      templateUrl: 'views/millsEvents.html',
+      controller: 'MillsEventsController',
+      controllerAs: 'millsEvents'
     });
 
     $routeProvider.when('/about', {
