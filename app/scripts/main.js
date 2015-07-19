@@ -52,6 +52,10 @@
       controllerAs: 'mills3'
     });
 
+    $routeProvider.when('/millsEvents', {
+      templateUrl: 'views/millsEvents.html'
+    });
+
     $routeProvider.when('/about', {
       templateUrl: 'views/about.html'
     });
