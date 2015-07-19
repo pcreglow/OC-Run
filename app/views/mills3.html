@@ -65,25 +65,8 @@
 </div>
 
 <div class="row">
-  <div class="events pull-left col-md-4">
-    <label>Local Events</label>
-    <br>
-    <ul class="list-group">
-      <li class="list-group-item">
-        <strong>Track Shack Running Group</strong>
-        <br> When: Every Tuesday and Thursday at 6:30
-        <br> Contact: <a href="www.trackshack.com">www.trackshack.com</a>
-      </li>
-      <li class="list-group-item">
-        <strong>Orlando Runners</strong>
-        <br> When: Every Saturday at 7:30 AM
-        <br> Contact: Orlando Runners on meetup.com</a>
-      </li>
-    </ul>
-  </div>
-
   <form ng-submit="mills3.addComment()">
-    <div class="commentForm form-group col-md-4">
+    <div class="commentForm form-group col-md-6">
       <label>
         <strong>Submit a comment</strong>
       </label>
@@ -98,7 +81,7 @@
     </div>
   </form>
 
-  <div class="comments col-md-4">
+  <div class="comments col-md-6">
     <label>Comments</label>
     <br>
     <ul class="list-group" ng-repeat="(id, comment) in mills3.comments">
