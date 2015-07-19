@@ -30,6 +30,10 @@
       controllerAs: 'lake3'
     });
 
+    $routeProvider.when('/lakeEolaEvents', {
+      templateUrl: 'views/lakeEolaEvents.html'
+    });
+
     $routeProvider.when('/millsFifty', {
       templateUrl: 'views/millsFifty.html',
       controller: 'MillsController',
