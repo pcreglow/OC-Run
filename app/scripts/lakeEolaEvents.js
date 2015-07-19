@@ -17,11 +17,17 @@ angular.module('oc-run')
     self.addEvent = function(){
 
       self.events.$add({
-        name: self.newCommentName,
-        text: self.newCommentText
+        name: self.newEventName,
+        date: self.newEventDate,
+        time: self.newEventTime,
+        website: self.newEventWebsite,
+        info: self.newEventInformation
       });
-      self.newCommentName = '';
-      self.newCommentText = '';
+      self.newEventName = '';
+      self.newEventDate = '';
+      self.newEventTime = '';
+      self.newEventWebsite = '';
+      self.newEventInformation = '';
     };
 });
 })();

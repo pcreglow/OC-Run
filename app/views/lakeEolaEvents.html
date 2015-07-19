@@ -29,22 +29,26 @@
 </div>
 
 <div class="row">
-  <form class="pull-left col-md-6">
+  <form class="pull-left col-md-6" ng-submit="lakeEvents.addEvent()">
   <div class="form-group">
     <label><strong>Submit Event/Running Group</strong></label><br>
-    <label for="eventName">Event Name</label>
-    <input type="name" class="form-control" id="inputEventName" placeholder="Name of event/running group">
+    <label for="eventName">Event/Group Name</label>
+    <input type="name" class="form-control" id="inputEventName" placeholder="Name of event/running group" ng-model="lakeEvents.newEventName">
   </div>
   <div class="form-group">
-    <label for="activityDate">Event Date</label>
-    <input type="date" class="form-control" id="inputActivityDate" placeholder="Event Date(s)">
+    <label for="activityDate">Event/Group Date</label>
+    <input type="date" class="form-control" id="inputActivityDate" placeholder="Event Date" ng-model="lakeEvents.newEventDate">
   </div>
   <div class="form-group">
-    <label for="website">Website</label>
-    <input type="url" class="form-control" id="inputContact" placeholder="Event website">
+    <label for="activityDate">Event/Group Time</label>
+    <input type="time" class="form-control" id="inputActivityTime" placeholder="Event Time" ng-model="lakeEvents.newEventTime">
   </div>
-  <label for="inputComment">Comment</label>
-  <textarea class="form-control" rows="3" placeholder="Additional information about this event"></textarea><br>
+  <div class="form-group">
+    <label for="website">Event/Group Website</label>
+    <input type="url" class="form-control" id="inputContact" placeholder="Event website" ng-model="lakeEvents.newEventWebsite">
+  </div>
+  <label for="inputComment">Event/Group Information</label>
+  <textarea type="text" class="form-control" id="inputInformation" rows="3" placeholder="Additional information about this event" ng-model="lakeEvents.newEventInformation"></textarea><br>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
 
