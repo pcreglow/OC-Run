@@ -1,4 +1,4 @@
-/* global angular */
+/* global angular Firebase */
 (function(){
   'use strict';
 
@@ -11,7 +11,6 @@
         console.log(self.routes);
       });
 
-      var comments = $routeParams.lake;
       var ref = new Firebase('https://oc-run.firebaseio.com/mills50/route/' + 'comments');
       self.comments = $firebaseArray(ref);
 
@@ -21,8 +20,8 @@
           name: self.newCommentName,
           text: self.newCommentText
         });
-        self.newCommentName="";
-        self.newCommentText="";
+        self.newCommentName = '';
+        self.newCommentText = '';
       };
 
     });

@@ -1,4 +1,4 @@
-/* global angular */
+/* global angular Firebase */
 (function(){
   'use strict';
 
@@ -13,7 +13,6 @@
         self.routes = response.data;
       });
 
-      var comments = $routeParams.lake;
       var ref = new Firebase('https://oc-run.firebaseio.com/lakeEola3/route/' + 'comments');
       self.comments = $firebaseArray(ref);
 
@@ -23,8 +22,8 @@
           name: self.newCommentName,
           text: self.newCommentText
         });
-        self.newCommentName="";
-        self.newCommentText="";
+        self.newCommentName = '';
+        self.newCommentText = '';
       };
 
     });

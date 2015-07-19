@@ -1,4 +1,4 @@
-/* global angular */
+/* global angular Firebase */
 (function(){
   'use strict';
 
@@ -11,7 +11,6 @@ angular.module('oc-run')
       console.log(self.routes);
     });
 
-    var comments = $routeParams.lake;
     var ref = new Firebase('https://oc-run.firebaseio.com/lakeEola/route/' + 'comments');
     self.comments = $firebaseArray(ref);
 
@@ -21,8 +20,8 @@ angular.module('oc-run')
         name: self.newCommentName,
         text: self.newCommentText
       });
-      self.newCommentName="";
-      self.newCommentText="";
+      self.newCommentName = '';
+      self.newCommentText = '';
     };
 
   });
