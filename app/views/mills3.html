@@ -1,13 +1,13 @@
 <div class="row" ng-repeat="route in mills3.routes">
-    <div class="pull-left col-md-4">
-      <div class="description">
-        <h3>{{ route.name }}</h3>
-        <br>
-        <p>{{ route.description }}</p>
-        <br>
-        <h4>Distance: {{ route.distance }}</h4>
-        <br>
-      </div>
+  <div class="pull-left col-md-4">
+    <div class="description">
+      <h3>{{ route.name }}</h3>
+      <br>
+      <p>{{ route.description }}</p>
+      <br>
+      <h4>Distance: {{ route.distance }}</h4>
+      <br>
+    </div>
 
     <div class="categories">
       <ul class="list-group">
@@ -39,72 +39,76 @@
     <img src="{{ route.map_url }}" alt="Orlando City Run Map">
   </div>
 
+</div>
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a class="thumbnail">
+      <img src="http://lorempixel.com/400/200/sports/9/" alt="sports-one">
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <a class="thumbnail">
+      <img src="http://lorempixel.com/400/200/sports/10/" alt="sports-two">
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <a class="thumbnail">
+      <img src="http://lorempixel.com/400/200/sports/1/" alt="sports-three">
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <a class="thumbnail">
+      <img src="http://lorempixel.com/400/200/sports/2/" alt="sports-four">
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="events pull-left col-md-4">
+    <label>Local Events</label>
+    <br>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <strong>Track Shack Running Group</strong>
+        <br> When: Every Tuesday and Thursday at 6:30
+        <br> Contact: <a href="www.trackshack.com">www.trackshack.com</a>
+      </li>
+      <li class="list-group-item">
+        <strong>Orlando Runners</strong>
+        <br> When: Every Saturday at 7:30 AM
+        <br> Contact: Orlando Runners on meetup.com</a>
+      </li>
+    </ul>
   </div>
 
-  <div class="row">
-    <div class="col-xs-6 col-md-3">
-      <a class="thumbnail">
-        <img src="http://lorempixel.com/400/200/sports/9/" alt="sports-one">
-      </a>
-    </div>
-    <div class="col-xs-6 col-md-3">
-      <a class="thumbnail">
-        <img src="http://lorempixel.com/400/200/sports/10/" alt="sports-two">
-      </a>
-    </div>
-    <div class="col-xs-6 col-md-3">
-      <a class="thumbnail">
-        <img src="http://lorempixel.com/400/200/sports/1/" alt="sports-three">
-      </a>
-    </div>
-    <div class="col-xs-6 col-md-3">
-      <a class="thumbnail">
-        <img src="http://lorempixel.com/400/200/sports/2/" alt="sports-four">
-      </a>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="events pull-left col-md-4">
-      <label>Local Events</label>
+  <form ng-submit="mills3.addComment()">
+    <div class="commentForm form-group col-md-4">
+      <label>
+        <strong>Submit a comment</strong>
+      </label>
       <br>
-      <ul class="list-group">
-        <li class="list-group-item">
-          <strong>Track Shack Running Group</strong>
-          <br> When: Every Tuesday and Thursday at 6:30
-          <br> Contact: <a href="www.trackshack.com">www.trackshack.com</a>
-        </li>
-        <li class="list-group-item">
-          <strong>Orlando Runners</strong>
-          <br> When: Every Saturday at 7:30 AM
-          <br> Contact: Orlando Runners on meetup.com</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="comments col-md-4">
-      <label>Comments</label>
+      <label for="inputName">Name</label>
+      <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="mills3.newCommentName">
       <br>
-      <ul class="list-group" ng-repeat="(id, comment) in mills3.comments">
-        <li class="list-group-item">
-          {{ comment.text }}
-          <br>
-          <small>
-            <strong>{{ comment.name }}</strong>
-          </small>
-        </li>
-      </ul>
+      <label for="inputComment">Comment</label>
+      <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="mills3.newCommentText">
+      <br>
+      <button type="submit" class="btn btn-default">Submit</button>
     </div>
+  </form>
 
-    <form ng-submit="mills3.addComment()">
-      <div class="commentForm form-group col-md-4">
-        <label for="inputName">Name</label>
-        <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="mills3.newCommentName">
+  <div class="comments col-md-4">
+    <label>Comments</label>
+    <br>
+    <ul class="list-group" ng-repeat="(id, comment) in mills3.comments">
+      <li class="list-group-item">
+        {{ comment.text }}
         <br>
-        <label for="inputComment">Comment</label>
-        <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="mills3.newCommentText">
-        <br>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </div>
-    </form>
+        <small>
+          <strong>{{ comment.name }}</strong>
+        </small>
+      </li>
+    </ul>
   </div>
+</div>
