@@ -31,7 +31,9 @@
     });
 
     $routeProvider.when('/lakeEolaEvents', {
-      templateUrl: 'views/lakeEolaEvents.html'
+      templateUrl: 'views/lakeEolaEvents.html',
+      controller: 'LakeEventsController',
+      controllerAs: 'lakeEvents'
     });
 
     $routeProvider.when('/millsFifty', {
