@@ -18,15 +18,17 @@ angular.module('oc-run')
 
       self.events.$add({
         name: self.newEventName,
+        location: self.newEventLocation,
         date: self.newEventDate,
         time: self.newEventTime,
-        website: self.newEventWebsite,
+        contact: self.newEventContact,
         info: self.newEventInformation
       });
       self.newEventName = '';
+      self.newEventLocation = '';
       self.newEventDate = '';
       self.newEventTime = '';
-      self.newEventWebsite = '';
+      self.newEventContact = '';
       self.newEventInformation = '';
     };
 });

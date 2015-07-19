@@ -36,37 +36,37 @@
     <input type="name" class="form-control" id="inputEventName" placeholder="Name of event/running group" ng-model="lakeEvents.newEventName">
   </div>
   <div class="form-group">
-    <label for="activityDate">Event/Group Date</label>
-    <input type="date" class="form-control" id="inputActivityDate" placeholder="Event Date" ng-model="lakeEvents.newEventDate">
+    <label for="eventLocation">Event/Group Location</label>
+    <input type="text" class="form-control" id="inputEventLocation" placeholder="Event location" ng-model="lakeEvents.newEventLocation">
   </div>
   <div class="form-group">
-    <label for="activityDate">Event/Group Time</label>
-    <input type="time" class="form-control" id="inputActivityTime" placeholder="Event Time" ng-model="lakeEvents.newEventTime">
+    <label for="eventDate">Event/Group Date</label>
+    <input type="text" class="form-control" id="inputEventDate" placeholder="Ex: July 31, 2015" ng-model="lakeEvents.newEventDate">
   </div>
   <div class="form-group">
-    <label for="website">Event/Group Website</label>
-    <input type="url" class="form-control" id="inputContact" placeholder="Event website" ng-model="lakeEvents.newEventWebsite">
+    <label for="eventDate">Event/Group Time</label>
+    <input type="text" class="form-control" id="inputEventTime" placeholder="Ex: 6:30 PM" ng-model="lakeEvents.newEventTime">
   </div>
-  <label for="inputComment">Event/Group Information</label>
-  <textarea type="text" class="form-control" id="inputInformation" rows="3" placeholder="Additional information about this event" ng-model="lakeEvents.newEventInformation"></textarea><br>
+  <div class="form-group">
+    <label for="eventContact">Event/Group Contact</label>
+    <input type="text" class="form-control" id="inputEventContact" placeholder="Event contact info, website" ng-model="lakeEvents.newEventContact">
+  </div>
+  <label for="eventInformation">Event/Group Information</label>
+  <textarea type="text" class="form-control" id="inputEventInformation" rows="3" placeholder="Additional information about this event" ng-model="lakeEvents.newEventInformation"></textarea><br>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
 
   <div class="events pull-right col-md-6">
     <label>Events/Running Groups</label>
     <br>
-    <ul class="list-group">
+    <ul class="list-group" ng-repeat="(id, event) in lakeEvents.events">
       <li class="list-group-item">
-        <strong>Track Shack Running Group</strong>
-        <br> When: Every Tuesday and Thursday at 6:30 PM
-        <br> Website: <a href="www.trackshack.com">www.trackshack.com</a>
-        <br> Additional: Join us every Tuesday and Thursday at 6:30 PM! We meet outside the playground
-        on the east side of Lake Eola. Come and meet fellow runners on this casual run around scenic Lake Eola.
-      </li>
-      <li class="list-group-item">
-        <strong>Orlando Runners</strong>
-        <br> When: Every Saturday at 7:30 AM
-        <br> Contact: Orlando Runners on meetup.com</a>
+        <strong><big>{{ event.name }}</big></strong>
+        <br><strong>Location: </strong> {{ event.location }}
+        <br><strong>Date: </strong> {{ event.date }}
+        <br><strong>Time: </strong> {{ event.time }}
+        <br><strong>Contact: </strong> {{ event.contact }}
+        <br><strong>Event Info: </strong> {{ event.info }}
       </li>
     </ul>
   </div>
