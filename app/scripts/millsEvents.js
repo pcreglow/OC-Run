@@ -11,5 +11,8 @@
         console.log(self.routes);
       });
 
+      var ref = new Firebase('https://oc-run.firebaseio.com/millsEvents/route/' + 'events');
+      self.events = $firebaseArray(ref);
+
   });
 })();
