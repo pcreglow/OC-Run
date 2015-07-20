@@ -36,62 +36,59 @@
   </div>
 
   <div class="photo col-md-8">
-    <img src="{{ route.map_url }}" alt="Orlando City Run Map">
-  </div>
-
-</div>
-
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a class="thumbnail">
-      <img src="http://lorempixel.com/400/200/sports/9/" alt="sports-one">
-    </a>
-  </div>
-  <div class="col-xs-6 col-md-3">
-    <a class="thumbnail">
-      <img src="http://lorempixel.com/400/200/sports/10/" alt="sports-two">
-    </a>
-  </div>
-  <div class="col-xs-6 col-md-3">
-    <a class="thumbnail">
-      <img src="http://lorempixel.com/400/200/sports/1/" alt="sports-three">
-    </a>
-  </div>
-  <div class="col-xs-6 col-md-3">
-    <a class="thumbnail">
-      <img src="http://lorempixel.com/400/200/sports/2/" alt="sports-four">
-    </a>
+    <img src="images/Orlando_City_Run.png" ng-src="{{ route.map_url }}" alt="Orlando City Run Logo">
   </div>
 </div>
 
 <div class="row">
-  <form ng-submit="mills3.addComment()">
-    <div class="commentForm form-group col-md-6">
-      <label>
-        <strong>Submit a comment</strong>
-      </label>
-      <br>
-      <label for="inputName">Name</label>
-      <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="mills3.newCommentName">
-      <br>
-      <label for="inputComment">Comment</label>
-      <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="mills3.newCommentText">
-      <br>
-      <button type="submit" class="btn btn-default">Submit</button>
+  <div class="photo col-md-6">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="http://lorempixel.com/400/200/sports/1" alt="Lake Eola">
+        </div>
+        <div class="item">
+          <img src="http://lorempixel.com/400/200/sports/2" alt="Lake Eola">
+        </div>
+      </div>
     </div>
-  </form>
-
-  <div class="comments col-md-6">
-    <label>Comments</label>
-    <br>
-    <ul class="list-group" ng-repeat="(id, comment) in mills3.comments">
-      <li class="list-group-item">
-        {{ comment.text }}
-        <br>
-        <small>
-          <strong>{{ comment.name }}</strong>
-        </small>
-      </li>
-    </ul>
   </div>
+  <section class="col-md-6">
+    <form ng-submit="mills3.addComment()">
+      <div class="commentForm form-group">
+        <label>
+          <strong>Submit a comment</strong>
+        </label>
+        <br>
+        <label for="inputName">Name</label>
+        <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="mills3.newCommentName">
+        <br>
+        <label for="inputComment">Comment</label>
+        <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="mills3.newCommentText">
+        <br>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </form>
+
+    <div class="comments">
+      <label>Comments</label>
+      <br>
+      <ul class="list-group" ng-repeat="(id, comment) in mills3.comments">
+        <li class="list-group-item">
+          {{ comment.text }}
+          <br>
+          <small>
+            <strong>{{ comment.name }}</strong>
+          </small>
+        </li>
+      </ul>
+    </div>
+  </section>
 </div>
