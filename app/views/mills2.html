@@ -61,34 +61,34 @@
     </div>
   </div>
   <section class="col-md-6">
-  <form ng-submit="mills2.addComment()">
-    <div class="commentForm form-group">
-      <label>
-        <strong>Submit a comment</strong>
-      </label>
-      <br>
-      <label for="inputName">Name</label>
-      <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="mills2.newCommentName">
-      <br>
-      <label for="inputComment">Comment</label>
-      <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="mills2.newCommentText">
-      <br>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </div>
-  </form>
-
-  <div class="comments">
-    <label>Comments</label>
-    <br>
-    <ul class="list-group" ng-repeat="(id, comment) in mills2.comments">
-      <li class="list-group-item">
-        {{ comment.text }}
+    <form ng-submit="mills2.addComment()">
+      <div class="commentForm form-group">
+        <label>
+          <strong>Submit a comment</strong>
+        </label>
         <br>
-        <small>
-          <strong>{{ comment.name }}</strong>
-        </small>
-      </li>
-    </ul>
-  </div>
-</section>
+        <label for="inputName">Name</label>
+        <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="mills2.newCommentName">
+        <br>
+        <label for="inputComment">Comment</label>
+        <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="mills2.newCommentText">
+        <br>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </form>
+
+    <div class="comments">
+      <label>Comments</label>
+      <br>
+      <ul class="list-group" ng-repeat="(id, comment) in mills2.comments">
+        <li class="list-group-item">
+          {{ comment.text }}
+          <br>
+          <small>
+            <strong>{{ comment.name }}</strong>
+          </small>
+        </li>
+      </ul>
+    </div>
+  </section>
 </div>
