@@ -3,4 +3,18 @@
     margin-bottom: 2em;
     width: 100%;
   }
+
+  .description {
+    font-size: 2.5ex;
+    border: 0.5ex solid #5B27A0;
+    padding: 0.5em;
+    border-radius: 0.5ex;
+    margin-bottom: 0.5em;
+    h3 {
+      text-align: center;
+    }
+  }
+  span {
+    font-size: 2.5ex;
+  }
 }
