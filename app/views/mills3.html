@@ -6,31 +6,34 @@
         <br>
         <p>{{ route.description }}</p>
         <br>
-        <h4>Distance: {{ route.distance }}</h4>
+        <span class="distance">
+          <img src="images/noun_distance.svg" alt="distance logo">
+          <big>Distance: {{ route.distance }}</big>
+        </span>
         <br>
       </div>
 
       <div class="categories">
         <ul class="list-group">
           <li class="list-group-item">
-            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-            Amenities: {{ route.amenities }}
+            <img src="images/noun_amenities.svg" alt="amenities logo">
+            <big>Amenities: {{ route.amenities }}</big>
           </li>
           <li class="list-group-item">
-            <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
-            Crowds: {{ route.crowd }}
+            <img src="images/noun_crowd.svg" alt="crowd logo">
+            <big>Crowds: {{ route.crowd }}</big>
           </li>
           <li class="list-group-item">
-            <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-            Dog activity: {{ route.dog }}
+            <img src="images/noun_dog.svg" alt="dog logo">
+            <big>Dog activity: {{ route.dog }}</big>
           </li>
           <li class="list-group-item">
-            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
-            Bike activity: {{ route.bike }}
+            <img src="images/noun_bike.svg" alt="bike logo">
+            <big>Bike activity: {{ route.bike }}</big>
           </li>
           <li class="list-group-item">
-            <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
-            Surface: {{ route.surface }}
+            <img src="images/noun_surface.svg" alt="surface logo">
+            <big>Surface: {{ route.surface }}</big>
           </li>
         </ul>
       </div>
