@@ -31,6 +31,7 @@
       }
     }
   }
+  .categories {
   li {
     background-color: lightgrey;
     img {
@@ -43,8 +44,9 @@
       margin-left: 0.5em;
     }
   }
+}
   .commentForm {
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     border: 0.5ex solid #5b27a0;
     padding: 0.5em;
     border-radius: 0.5ex;
@@ -56,6 +58,23 @@
       text-align: center;
       font-size: 3ex;
       color: #5b27a0;
+    }
+  }
+  .comments {
+    .comment-title {
+      font-size: 3ex;
+      color: #777;
+      margin-bottom: 0;
+    }
+    .list-group-item {
+      border: 1px solid #5b27a0;
+      background-color: #f5f5f5;
+      font-size: 2ex;
+      font-weight: bold;
+      color: #777;
+      strong {
+        color: #5b27a0;
+      }
     }
   }
 }
