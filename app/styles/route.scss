@@ -63,17 +63,17 @@
   .comments {
     .comment-title {
       font-size: 3ex;
-      color: #777;
+      color: #5b27a0;
       margin-bottom: 0;
     }
     .list-group-item {
-      border: 1px solid #5b27a0;
+      border: 1px solid #777;
       background-color: #f5f5f5;
       font-size: 2ex;
-      font-weight: bold;
-      color: #777;
+      color: black;
       strong {
         color: #5b27a0;
+        font-size: 2ex;
       }
     }
   }
