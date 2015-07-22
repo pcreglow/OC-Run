@@ -1,32 +1,32 @@
 <section class="running-events">
   <div class="row">
-    <form class="pull-left col-md-6" ng-submit="millsEvents.addEvent()">
+    <form class="events-form col-md-6" ng-submit="millsEvents.addEvent()">
       <div class="form-group">
         <label>
-          <strong>Submit Event/Running Group</strong>
+          <strong>Share your running event/group</strong>
         </label>
         <br>
-        <label for="eventName">Event/Group Name</label>
-        <input type="name" class="form-control" id="inputEventName" placeholder="Name of event/running group" ng-model="millsEvents.newEventName">
+        <label for="eventName">Running Event/Group Name</label>
+        <input type="name" class="form-control" id="inputEventName" placeholder="Name of running event/group" ng-model="millsEvents.newEventName">
       </div>
       <div class="form-group">
-        <label for="eventLocation">Event/Group Location</label>
-        <input type="text" class="form-control" id="inputEventLocation" placeholder="Event location" ng-model="millsEvents.newEventLocation">
+        <label for="eventLocation">Location</label>
+        <input type="text" class="form-control" id="inputEventLocation" placeholder="Location of event/group meetup" ng-model="millsEvents.newEventLocation">
       </div>
       <div class="form-group">
-        <label for="eventDate">Event/Group Date</label>
+        <label for="eventDate">Date</label>
         <input type="text" class="form-control" id="inputEventDate" placeholder="Ex: July 31, 2015" ng-model="millsEvents.newEventDate">
       </div>
       <div class="form-group">
-        <label for="eventDate">Event/Group Time</label>
+        <label for="eventDate">Time</label>
         <input type="text" class="form-control" id="inputEventTime" placeholder="Ex: 6:30 PM" ng-model="millsEvents.newEventTime">
       </div>
       <div class="form-group">
-        <label for="eventContact">Event/Group Contact</label>
-        <input type="text" class="form-control" id="inputEventContact" placeholder="Event contact info, website" ng-model="millsEvents.newEventContact">
+        <label for="eventContact">Contact</label>
+        <input type="text" class="form-control" id="inputEventContact" placeholder="Contact information, website, etc." ng-model="millsEvents.newEventContact">
       </div>
-      <label for="eventInformation">Event/Group Information</label>
-      <textarea type="text" class="form-control" id="inputEventInformation" rows="3" placeholder="Additional information about this event" ng-model="millsEvents.newEventInformation"></textarea>
+      <label for="eventInformation">Additional Information</label>
+      <textarea type="text" class="form-control" id="inputEventInformation" rows="3" placeholder="Additional information about this running event/group" ng-model="millsEvents.newEventInformation"></textarea>
       <br>
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
@@ -39,7 +39,7 @@
       <br>
       <p>{{ route.description }}</p>
     </div>
-    
+
       <ul class="list-group" ng-repeat="(id, event) in millsEvents.events">
         <li class="list-group-item">
           <strong>
