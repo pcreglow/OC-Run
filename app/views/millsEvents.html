@@ -2,9 +2,9 @@
   <div class="row">
     <form class="events-form col-md-6" ng-submit="millsEvents.addEvent()">
       <div class="form-group">
-        <label>
+        <h4 class="events-title">
           <strong>Share your running event/group</strong>
-        </label>
+        </h4>
         <br>
         <label for="eventName">Running Event/Group Name</label>
         <input type="name" class="form-control" id="inputEventName" placeholder="Name of running event/group" ng-model="millsEvents.newEventName">
@@ -35,7 +35,7 @@
 
     <div class="events col-md-6">
     <div class="description" ng-repeat="route in millsEvents.routes">
-      <h4>{{ route.title }}</h4>
+      <h3>{{ route.title }}</h3>
       <br>
       <p>{{ route.description }}</p>
     </div>

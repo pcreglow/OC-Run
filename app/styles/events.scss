@@ -8,5 +8,24 @@
       font-size: 2.5ex;
       color: #777;
     }
-}
+    .events-title {
+      text-align: center;
+      font-size: 3ex;
+      color: #5b27a0;
+    }
+  }
+  .description {
+    margin-bottom: 0.5em;
+    color: #777;
+    h3 {
+      text-align: center;
+      color: #5b27a0;
+      padding: 5px;
+      text-decoration: underline;
+    }
+    p {
+      font-size: 2ex;
+      margin-left: 0.5em;
+    }
+  }
 }
