@@ -43,4 +43,19 @@
       margin-left: 0.5em;
     }
   }
+  .commentForm {
+    background-color: #F5F5F5;
+    border: 0.5ex solid #5b27a0;
+    padding: 0.5em;
+    border-radius: 0.5ex;
+    label {
+      font-size: 2.5ex;
+      color: #777;
+    }
+    .comments-title {
+      text-align: center;
+      font-size: 3ex;
+      color: #5b27a0;
+    }
+  }
 }
