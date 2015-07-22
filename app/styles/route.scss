@@ -3,27 +3,44 @@
     margin-bottom: 2em;
     width: 100%;
   }
-
   .description {
-    font-size: 2.5ex;
-    border: 0.5ex solid #5B27A0;
+    border: 0.5ex solid #5b27a0;
     padding: 0.5em;
     border-radius: 0.5ex;
     margin-bottom: 0.5em;
+    color: #777;
     h3 {
       text-align: center;
+      color: #5b27a0;
+      padding: 5px;
+      text-decoration: underline;
     }
-  }
-    li {
-      background-color: lightgrey;
+    p {
+      font-size: 2ex;
+      margin-left: 0.5em;
+    }
+    span {
       img {
-        width: 2em;
-        height: 2em;
+        width: 4em;
+        height: 4em;
         margin: 0;
-        background-color: lightgrey;
       }
       big {
-        margin-left: 0.5em;
+        font-weight: bold;
+        font-size: 2.5ex;
       }
     }
   }
+  li {
+    background-color: lightgrey;
+    img {
+      width: 2em;
+      height: 2em;
+      margin: 0;
+      background-color: lightgrey;
+    }
+    big {
+      margin-left: 0.5em;
+    }
+  }
+}

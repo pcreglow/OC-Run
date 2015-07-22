@@ -6,18 +6,21 @@
         <br>
         <p>{{ route.description }}</p>
         <br>
-        <h4>Distance: {{ route.distance }}</h4>
+        <span class="distance">
+          <img src="images/noun_distance.svg" alt="distance logo">
+          <big>Distance: {{ route.distance }}</big>
+        </span>
         <br>
       </div>
 
       <div class="categories">
         <ul class="list-group">
           <li class="list-group-item">
-            <img src="images/noun_dog.svg" alt="dog logo">
+            <img src="images/noun_amenities.svg" alt="amenities logo">
             <big>Amenities: {{ route.amenities }}</big>
           </li>
           <li class="list-group-item">
-            <img src="images/noun_dog.svg" alt="dog logo">
+            <img src="images/noun_crowd.svg" alt="crowd logo">
             <big>Crowds: {{ route.crowd }}</big>
           </li>
           <li class="list-group-item">
