@@ -68,22 +68,24 @@
     <section class="col-md-6">
       <form ng-submit="lake3.addComment()">
         <div class="commentForm form-group">
-          <label>
+          <h4 class="comments-title">
             <strong>Submit a comment</strong>
-          </label>
+          </h4>
           <br>
           <label for="inputName">Name</label>
           <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="lake3.newCommentName">
           <br>
           <label for="inputComment">Comment</label>
-          <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="lake3.newCommentText">
+          <textarea type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="lake3.newCommentText"></textarea>
           <br>
           <button type="submit" class="btn btn-default">Submit</button>
         </div>
       </form>
 
       <div class="comments">
-        <label>Comments</label>
+        <h4 class="comment-title">
+          <strong>Comments</strong>
+        </h4>
         <br>
         <ul class="list-group" ng-repeat="(id, comment) in lake3.comments">
           <li class="list-group-item">
