@@ -1,0 +1,48 @@
+.about-page {
+  img {
+    width: 100%;
+  }
+  .introduction {
+    margin: 2em 0;
+    text-align: center;
+    strong {
+      font-size: 2.5ex;
+    }
+    big {
+      color: #5b27a0;
+    }
+    .intro-logo {
+      img {
+
+        height: 16em;
+      }
+      h2 {
+        margin-top: -2em;
+      }
+    }
+    .GitHub {
+      text-align: center;
+      img {
+        width: 2em;
+        height: 2em;
+      }
+      big {
+        color: black;
+        font-size: 2ex;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .credits {
+    text-align: center;
+    img {
+      width: 2em;
+      height: 2em;
+    }
+    small {
+      color: #777;
+      font-size: 1.5ex;
+    }
+  }
+}

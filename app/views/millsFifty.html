@@ -1,93 +1,101 @@
-<div class="row" ng-repeat="route in mills.routes">
-  <div class="pull-left col-md-4">
-    <div class="description">
-      <h3>{{ route.name }}</h3>
-      <br>
-      <p>{{ route.description }}</p>
-      <br>
-      <h4>Distance: {{ route.distance }} </h4>
-    </div>
-    <div class="categories">
-      <ul class="list-group">
-        <li class="list-group-item">
-          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-          Amenities: {{ route.amenities }}
-        </li>
-        <li class="list-group-item">
-          <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
-          Crowds: {{ route.crowd }}
-        </li>
-        <li class="list-group-item">
-          <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-          Dog activity: {{ route.dog }}
-        </li>
-        <li class="list-group-item">
-          <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
-          Bike activity: {{ route.bike }}
-        </li>
-        <li class="list-group-item">
-          <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
-          Surface: {{ route.surface }}
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="photo col-md-8">
-    <img src="{{ route.map_url }}" alt="Mills 50 Run Map">
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a class="thumbnail">
-      <img src="http://lorempixel.com/400/200/sports/5/" alt="sports-one">
-    </a>
-  </div>
-  <div class="col-xs-6 col-md-3">
-    <a class="thumbnail">
-      <img src="http://lorempixel.com/400/200/sports/6/" alt="sports-two">
-    </a>
-  </div>
-  <div class="col-xs-6 col-md-3">
-    <a class="thumbnail">
-      <img src="http://lorempixel.com/400/200/sports/7/" alt="sports-three">
-    </a>
-  </div>
-  <div class="col-xs-6 col-md-3">
-    <a class="thumbnail">
-      <img src="http://lorempixel.com/400/200/sports/8/" alt="sports-four">
-    </a>
-  </div>
-</div>
-
-<div class="row">
-  <form ng-submit="mills.addComment()">
-    <div class="commentForm form-group col-md-6">
-      <label>
-        <strong>Submit a comment</strong>
-      </label>
-      <br>
-      <label for="inputName">Name</label>
-      <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="mills.newCommentName">
-      <br>
-      <label for="inputComment">Comment</label>
-      <input type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="mills.newCommentText">
-      <br>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </div>
-  </form>
-
-  <div class="comments col-md-6">
-    <label>Comments</label>
-    <br>
-    <ul class="list-group" ng-repeat="(id, comment) in mills.comments">
-      <li class="list-group-item">
-        {{ comment.text }}
+<section class="running-route">
+  <div class="row" ng-repeat="route in mills.routes">
+    <div class="pull-left col-md-4">
+      <div class="description">
+        <h3>{{ route.name }}</h3>
         <br>
-        <small>
-          <strong>{{ comment.name }}</strong>
-        </small>
-      </li>
-    </ul>
+        <p>{{ route.description }}</p>
+        <br>
+        <span class="distance">
+          <img src="images/noun_distance.svg" alt="distance logo">
+          <big>Distance: {{ route.distance }}</big>
+        </span>
+        <br>
+      </div>
+
+      <div class="categories">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <img src="images/noun_amenities.svg" alt="amenities logo">
+            <big>Amenities: {{ route.amenities }}</big>
+          </li>
+          <li class="list-group-item">
+            <img src="images/noun_crowd.svg" alt="crowd logo">
+            <big>Crowds: {{ route.crowd }}</big>
+          </li>
+          <li class="list-group-item">
+            <img src="images/noun_dog.svg" alt="dog logo">
+            <big>Dog activity: {{ route.dog }}</big>
+          </li>
+          <li class="list-group-item">
+            <img src="images/noun_bike.svg" alt="bike logo">
+            <big>Bike activity: {{ route.bike }}</big>
+          </li>
+          <li class="list-group-item">
+            <img src="images/noun_surface.svg" alt="surface logo">
+            <big>Surface: {{ route.surface }}</big>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="photo col-md-8">
+      <img src="images/Orlando_City_Run.png" ng-src="{{ route.map_url }}" alt="Orlando City Run Logo">
+    </div>
   </div>
-</div>
+
+  <div class="row">
+    <div class="photo col-md-6" ng-repeat="route in mills.routes">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="images/Orlando_City_Run.png" ng-src="{{ route.photo1_url }}" alt="Orlando City Run Logo">
+          </div>
+          <div class="item">
+            <img src="images/Orlando_City_Run.png" ng-src="{{ route.photo2_url }}" alt="Orlando City Run Logo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="col-md-6">
+      <form ng-submit="mills.addComment()">
+        <div class="commentForm form-group">
+          <h4 class="comments-title">
+            <strong>Submit a comment</strong>
+          </h4>
+          <br>
+          <label for="inputName">Name</label>
+          <input type="name" class="form-control" id="inputName" placeholder="Your Name" ng-model="mills.newCommentName">
+          <br>
+          <label for="inputComment">Comment</label>
+          <textarea type="text" class="form-control" rows="3" placeholder="Share a comment about this route" ng-model="mills.newCommentText"></textarea>
+          <br>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </form>
+
+      <div class="comments">
+        <h4 class="comment-title">
+          <strong>Comments</strong>
+        </h4>
+        <br>
+        <ul class="list-group" ng-repeat="(id, comment) in mills.comments">
+          <li class="list-group-item">
+            {{ comment.text }}
+            <br>
+            <small>
+              <strong>{{ comment.name }}</strong>
+            </small>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</section>
