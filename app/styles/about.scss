@@ -1,0 +1,31 @@
+.about-page {
+  img {
+    width: 100%;
+  }
+  .introduction {
+    margin: 2em 0;
+    text-align: center;
+    strong {
+      font-size: 2.5ex;
+    }
+    big {
+      color: #5b27a0;
+    }
+    .intro-logo {
+      img {
+
+        height: 16em;
+      }
+      h2 {
+        margin-top: -2em;
+      }
+    }
+  }
+  .credits {
+    text-align: center;
+    img {
+      width: 5em;
+      height: 5em;
+    }
+  }
+}
