@@ -24,8 +24,12 @@
   .credits {
     text-align: center;
     img {
-      width: 5em;
-      height: 5em;
+      width: 2em;
+      height: 2em;
+    }
+    small {
+      color: #777;
+      font-size: 1.5ex;
     }
   }
 }
