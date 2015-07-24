@@ -13,7 +13,7 @@
     "chai": "~3.0.0",
     "mocha": "~2.2.5"
   },
-  "version": "1.2.0",
+  "version": "1.2.1",
   "homepage": "https://github.com/pcreglow/OC-Run",
   "authors": [
     "Phillip Creglow <phillipcreglow@msn.com>"
